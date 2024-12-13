@@ -11,6 +11,8 @@
     --text-primary-color:41, 41, 41;
     --text-secondary-color:#cc3333;
     --text-secondary-color:204, 51, 51;
+    --description-color-dark-300:#292929c9;
+    --description-color-dark-300-rgb:41, 41, 41, 0.788;
     --description-color-dark:#666666;
     --description-color-light:#ffffff;
     --font-style: Roboto;
@@ -24,7 +26,7 @@
 body{
     background-color: var(--bg);
     max-width: 1320px;
-    margin: 20px auto;
+    margin: 0px auto;
     font-style: var(--font-style);
     color: var(--text-primary-color);
     font-weight: var(--gw);
@@ -66,6 +68,7 @@ h1,h2,h3,h4,h5,h6{
     margin-left: calc(1* var(--gw));
     margin-right: calc(1* var(--gw));
     /* background-color: black; */
+    
     
 }
 .col-one{
@@ -127,8 +130,12 @@ h1,h2,h3,h4,h5,h6{
 }
 .banner-one{
     background-image: url(../images/banner-bg.jpg);
+    height: 760px;
+    width: 1320px;
 }
-
+nav{
+    display: block;
+}
 .logo{
     
     height: auto;
@@ -157,6 +164,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     gap: 30px;
     margin: 20px; 
+    position: relative;
     
 }
 .nav-list li a {
@@ -171,3 +179,30 @@ h1,h2,h3,h4,h5,h6{
     left: -10;
     
 }
+.dropdown{
+    display: block;
+    position: absolute;
+    top: 120%;
+    border-top: 3px solid red;
+}
+.dropdown-menu ul li a{
+    display: block;
+    padding: 20px 0;
+    width: 200px;
+    background-color: var(--primary-color);
+    box-shadow: 1px 17px 20px 1px #5958581c;
+    border-bottom: 1px solid #f2f2f2;
+    padding-left: 15px;
+    transition:all 0.3s ease;
+    visibility: hidden;
+    
+    
+}
+.dropdown-menu ul li a:hover{
+    background-color: lightgray;
+    transform: scale(1.2s);
+}
+.dropdown a:hover{
+    visibility: visible;
+}
+
