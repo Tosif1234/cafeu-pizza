@@ -41,6 +41,9 @@ img{
     display: block;
 
 }
+img, svg{
+    vertical-align: middle;
+}
 ol,ul{
     padding: 0;
     list-style: none;
@@ -60,7 +63,7 @@ p{
     font-family: var(--primary-font-style);
     color: var(--description-color-dark);
     font-weight: 400;
-    line-height: var(--ln);
+    line-height: 25px;
 }
 .btn,.sm-btn{
     display: inline-block;
@@ -555,12 +558,10 @@ nav{
 }
 
 .inner-part{
-    padding-top: 105px;
-    padding-bottom: 105px;
     background-size: cover;
     position: 0;
 }
-
+/* Category Header Menu */
 .cat-menu{
     display: flex;
     margin-bottom: 40px;
@@ -602,20 +603,24 @@ nav{
     background: var(--primary-color);
     overflow: hidden;
 }
-.all-product .product-img {
-    width: 100%;
+
+.all-product .product-img img{
+    width: 600px;
+    
 }
 .product-img{
     overflow: hidden;
     background-color: var(--primary-color);
     position: relative;
-    object-fit: contain;
+    object-fit: cover;
     transition: all 0.3s;
     
 }
+
 .product-card:hover .product-img{
     transform: scale(1.1);
     overflow: hidden;
+    
 }
 .product-details{
     padding: 25px;
@@ -647,7 +652,7 @@ nav{
     visibility: hidden;
     background: none;
     border: 1px solid #ddd;
-    transition: all .3s ease;
+    transition: all .1s ease;
 
 }
 
@@ -658,4 +663,111 @@ nav{
 .product-card:hover .sm-btn:not(:first-child){
     background-color: var(--text-secondary-color);
     
+}
+/* App Section */
+.app-section{
+    margin: 56px 0 82px;
+    position: relative;
+}
+.app-inner{
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-image: url(../images/App-part/app-bg.png);
+}   
+.app-content{
+    padding: 50px;
+}
+.app-content h2{
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.app-content p{
+    padding: 15px 0;
+    margin: 8px 0;
+}
+.store img{
+    width: 150px;
+    margin: 15px 10px 0 0;
+}
+.app-section .app-img img{
+    margin-top: 50px;
+    width: 300px;
+}
+.app-one{
+    position: absolute;
+    right: -20px;
+    bottom: 50px;
+    animation: app-one 1.5s linear infinite alternate;
+    transition: all 0.5s ease;
+    animation-play-state: running;
+    
+}
+.app-two{
+    position: absolute;
+    right: 300px;
+    animation: app-two 1.5s linear infinite alternate;
+    
+}
+
+@keyframes app-one{
+    
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: -20px;
+    }
+
+}
+@keyframes app-two{
+    
+    0%{
+        top: -20px;
+    }
+    100%{
+        top: -60px;
+    }
+
+}
+.mb-0{
+    margin-bottom: 0;
+}
+/* Available Section */
+.available{
+    margin-bottom: 120px;
+    background-image: url(../images/available/subscribe-bg.png);
+}
+.bg-available{
+    background:#0000007d;
+    padding: 60px 0;
+}
+.avai-inner{
+    position: relative;
+}
+.available-content h2{
+    color: var(--primary-color);
+    margin: 20px 0;
+    font-size: 36px;
+}
+.available-content p{
+    color: var(--primary-color);
+    font-weight: 400;
+
+}
+.avail-inner{
+    position: relative;
+    width:100%;
+    margin-top: 20px;
+
+}
+.avail-note{
+    position: absolute;
+    background:var(--primary-color);
+    width: 100%;
+    padding: 40px 20px;
+    box-shadow: 0 15px 20px 1px #9c9c9c52;
+}
+.note-head{
+    padding-bottom: 20px;
+    text-align: center;
 }
