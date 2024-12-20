@@ -606,20 +606,19 @@ nav{
 
 .all-product .product-img img{
     width: 600px;
+    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
     
 }
 .product-img{
-    overflow: hidden;
     background-color: var(--primary-color);
     position: relative;
-    object-fit: cover;
     transition: all 0.3s;
     
 }
-
 .product-card:hover .product-img{
     transform: scale(1.1);
-    overflow: hidden;
     
 }
 .product-details{
@@ -732,6 +731,9 @@ nav{
 .mb-0{
     margin-bottom: 0;
 }
+.mt-40{
+    margin-top: 40px;
+}
 /* Available Section */
 .available{
     margin-bottom: 120px;
@@ -790,6 +792,7 @@ nav{
 .note-footer{
     text-align: center;
     padding-top: 25px;
+    /* padding-bottom: 10px; */
     font-family: var(--secondary-font-style);
     font-size: 22px;
     cursor: pointer;
@@ -801,5 +804,201 @@ nav{
     font-weight: 700;
     color: var(--text-primary-color);
 }
+/* Team Section */
+.team{
+    padding-top: 105px;
+    margin-bottom: 80px;
+}
+.team-head{
+    text-align: center;
+    
+}
+.team-card{
+    text-align: center;
+    box-shadow: 0 9px 20px 1px #98767626;
+    overflow: hidden;
+}
+.team-card img{
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease;
+    aspect-ratio: 1.08;
+}
+.team-image a{
+    display: block;
+    cursor: default;
+}
+.team-card:hover img{
+    transform: scale(1.1);
+    
+}
+.team-details{
+    padding: 20px 15px;
+}
+.team-details h3{
+    padding-bottom: 7px;
+    transition: .3s;
+    font-weight: 600;
+    display: block;
+    cursor: pointer;
+}
+.team-details h3:hover{
+    color: var(--text-secondary-color);
+}
+.team-card::after{
+    content: '';
+    height: 2px;
+    width: 60%;
+    background: #000;
+    display: block;
+    margin: auto;
+    transition: .3s;
+}
+.team-card:hover::after{
+    background: var(--text-secondary-color);
+}
+.partner{
+    background-image: url(../images/partner/partner-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.partner-bg{
+    padding: 82px 0;
+    background: #00000096;
+    position: relative;
+}
+.partner-inner{
+    position: relative;
+}
+.swiper {
+    position: absolute;
+}
+/* Customer Section */
+.customer{
+    padding-top: 105px;
+    padding-bottom: 105px;
+    
+}
+.customer-heading{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.customer-heading .s-title{
+    font-weight: 400;
 
+}
+.customer-heading h2{
+    font-size: 36px;
+}
+.review{
+    box-shadow: 0 0 13px 1px #ddd;
+    border-left: 2px solid var(--text-secondary-color);
+    height: 100%;
+    padding: 25px 50px 50px;
+}
+.review h2{
+    font-size: 36px;
+}
+.review p{
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+.customer-name span{
+    font-size: 13px;
+    font-weight: 400;
+}
+.customer-img{
+    height: 430px;
+    overflow: hidden;
+    
+}
+.customer-img img{
+    width: 85%;
+}
+/* Latest Blog */
+.l-blog{
+    padding-top: 105px;
+    padding-bottom: 105px;
+    background-image: url(../images/Latest-blog/bg-blog.png);
+}
+.blog-card{
+    background: var(--primary-color);
+    box-shadow: 0 5px 20px 1px #00000029;
+    overflow: hidden;
+}
+.blog-img{
+    overflow: hidden;
+    transition: 0.6s;
+}
+.blog-img img{
+    width: 500px;
+    overflow: hidden;
+}
+.blog-img:hover{
+    transform: scale(1.1);
+}
+.blog-head{
+    text-align: center;
+    
+}
+.blog-content{
+    padding: 20px 25px;
+}
 
+.blog-content h3{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+}
+.blog-content p{
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.blog-date{
+    display: flex;
+    justify-content: space-between;
+}
+.blog-date{
+    padding: 0 20px 25px 25px ;
+    
+}
+.blog-date a{
+    color: var(--description-color-dark);
+    font-family: var(--primary-font-style);
+    border-bottom: 2px solid #7a7a7a;
+    font-weight: 400;
+    transition: 0.1s;
+}
+.blog-date a:hover{
+    color: var(--text-secondary-color);
+    border-bottom: 2px solid var(--text-secondary-color);
+}
+/* footer part */
+.footer-part{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/footer/footer-bg.png);
+    padding-top: 65px;
+}
+
+.footer-content img{
+    margin-bottom: 24px;
+}
+.footer-content p{
+    color: var(--primary-color);
+}
+ul.address li{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+ul.address li span i{
+    font-size: 30px;
+}
+ul.address li p{
+    padding-left: 12px;
+    line-height: 20px;
+}
+ul.address li p a{
+    color: var(--primary-color);
+}
