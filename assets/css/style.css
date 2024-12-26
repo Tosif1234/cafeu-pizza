@@ -26,9 +26,9 @@
 }
 body{
     background-color: var(--bg);
-    /* font-family: var(--primary-font-style); */
+    font-family: var(--primary-font-style);
     color:var(--text-primary-color);
-    /* font-weight: var(--fw); */
+    font-weight: var(--fw);
     line-height: var(--ln);
 
 }
@@ -108,7 +108,6 @@ p{
     flex-wrap: wrap;
     margin-left: calc(1* var(--gw));
     margin-right: calc(1* var(--gw));
-    /* background-color: black; */
     max-width: 1320px;
     margin: 0px auto;
     
@@ -179,10 +178,11 @@ p{
 nav{
     display: block;
 }
-.logo{
-    
+.nav-logo{
+    position: absolute;
     height: auto;
     width: 150px;
+    padding: 10px 0;
     
 }
 
@@ -203,32 +203,30 @@ nav{
 .contact img{
     gap: 10px;
 }
-.container .col-twelve{
-    position: fixed;
-    max-width: 1320px;
-    padding-top: 10px;
+.topbar .col-three{
+    padding-left: 0;
+}
+.navbar{
+    /* position: absolute; */
+    padding-left: 0;
     z-index: 1;
-    transition: all .03s ease;
-    background-color: var(--primary-color);
-    
+    transition: all .03s ease;   
 }
 
 .nav-list{
     display: flex;
     gap: 30px;
-    margin: 20px; 
+    padding: 10px 0;
     position: relative;
-    flex-wrap: wrap;
-    
-}
-.nav-list li a {
-    text-decoration: none;
-    font-weight: var(--fw);
-    color: var(--description-color-dark);
-    /* transition: all 0.5s ease; */
-    
+    flex-wrap: wrap;  
 }
 
+.nav-list li a {
+    font-size: 15px;
+    font-weight: 450;
+    color: var(--description-color-dark);
+    /* transition: all 0.5s ease; */    
+}
 
 .container .col-nine{
     position: absolute;
@@ -258,7 +256,8 @@ nav{
     background-color: var(--primary-color);
     box-shadow: 1px 17px 20px 1px #5958581c;
     border-bottom: 1px solid #f2f2f2;
-    padding-left: 15px;   
+    padding-left: 15px;
+    font-weight: 300;   
 }
 .dropdown-menu ul li a:hover{
     background-color: lightgray;
@@ -271,9 +270,10 @@ nav{
 }
 .dropdown img{
     margin: 3px;
-    padding-top: 5px;
+    padding-top: 3px;
     color: var(--description-color-light);
     width: 12px;
+    
     
    
 }
@@ -287,11 +287,11 @@ nav{
 .banner{
     background-image: url(../images/banner-bg.jpg);
     height: 760px;
-    display: block;
+    position: relative;
+    
 }
 .banner .row{
     position: relative;
-    display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -304,6 +304,7 @@ nav{
     margin-top: 10%;
     position: absolute;
     top: 100px;
+    padding-left: 17px;
     left: 0;
     
     
@@ -372,8 +373,29 @@ nav{
     font-weight: var(--fw);
     font-family: var(--primary-font-style);
     color: var(--text-primary-color);
-
 }
+.social-section{
+    display: flex;
+    position: absolute;
+    bottom: 50%;
+    right: -100px;
+    transform: rotate(90deg);
+    
+}
+.social-section li{
+    padding: 12px;
+}
+.social-section li a{
+    font-weight: 450;
+    font-size: 15px;
+    color: #666;
+    transition: all 0.3s;
+}
+.social-section li a:hover{
+    color: var(--text-secondary-color);
+    text-decoration: underline;
+}
+
 /* feature Section */
 
 
@@ -423,7 +445,8 @@ nav{
     background-repeat: no-repeat;
     background-position: 50%;
 }
-.feature-card :hover{
+.feature-card:hover .discover-bt , 
+.feature-card:hover .feature-name a{
     transform: scale(1.2s, 0.5s);
     color:var(--text-secondary-color); 
 }
@@ -467,9 +490,11 @@ nav{
     
 
 }
-.discover-bt:hover::after,.discover-bt:hover::before{
-    transform: scale(0.8);
+.feature-card:hover .discover-bt::after,
+.feature-card:hover .discover-bt::before{
+    transform: scale(1.5),rotate(45deg);
     background: rgba(204, 51, 51, 0.5);
+   
 
 }
 /* Subscribe Section */
@@ -498,6 +523,7 @@ nav{
     display: flex;
     justify-content: flex-start;
     padding: 0 30px 30px;
+    outline: none;
     
 }
 .form-handle .btn i{
@@ -615,6 +641,7 @@ nav{
     background-color: var(--primary-color);
     position: relative;
     transition: all 0.3s;
+    overflow: hidden;
     
 }
 .product-card:hover .product-img{
@@ -857,6 +884,7 @@ nav{
 .team-card:hover::after{
     background: var(--text-secondary-color);
 }
+/* Partner */
 .partner{
     background-image: url(../images/partner/partner-bg.png);
     background-size: cover;
@@ -865,14 +893,23 @@ nav{
 .partner-bg{
     padding: 82px 0;
     background: #00000096;
-    position: relative;
+    
 }
-.partner-inner{
-    position: relative;
+.partner-logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    
 }
-.swiper {
-    position: absolute;
+.partner-logo img{
+    width: 350px;
+    height: 60px;
+    
 }
+
+
+
 /* Customer Section */
 .customer{
     padding-top: 105px;
@@ -1000,5 +1037,89 @@ ul.address li p{
     line-height: 20px;
 }
 ul.address li p a{
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.footer-head{
+    margin-bottom: 24px;
+}
+.footer-head h4{
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.footer-head h4::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 70%;
+    background:var(--primary-color);
+    bottom: 0;
+    left: 0;
+}
+
+.foot-list a{
+    color: var(--primary-color);
+    margin: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.foot-list a:hover, ul.address li p a:hover{
+    color: var(--text-secondary-color);
+}
+.pl-40{
+    padding-left: 40px;
+}
+.mb-40{
+    margin-bottom: 20px;
+}
+
+.footer-img{
+    display: inline-flex;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.footer-img img{
+    margin-bottom: 8px;
+    margin-left: 8px;
+    width: 30%;
+    
+}
+.footer-content p{
+    width: 120%;
+}
+.footer-content .form-handle{
+    outline: var(--text-secondary-color);
+    width: 125%;
+    height: 44px;
+    padding-left: 0;
+}
+.footer-content .btn{
+    height: 44px;
+}
+.social-icons{
+    display:flex;
+    padding-top: 20px;
+    gap: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+.footer-content .icon i:hover{
+    color:red;
+}
+/* footer last */
+.footer-last{
+    padding: 20px 0;
+    border: 1px solid #444;
+    margin-top: 65px;
+   
+}
+.footer-last p{
     color: var(--primary-color);
 }
