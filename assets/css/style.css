@@ -402,7 +402,7 @@ nav{
 .feature-card:hover{
     border-color: var(--primary-color);
     background: var(--primary-color);
-    box-shadow: 0 0 20px 1px #e7e6e6 ;
+    box-shadow: 0 0 15px #e7e6e6 ;
 }
 
 .feature-icon img{
@@ -597,25 +597,46 @@ nav{
 }
 /* product list */
 .product-card{
-    padding: 0;
-    box-shadow: 0 0 41px 1px #f0f0f0;
+    box-shadow: 0 0 35px #f0f0f0;
     background: var(--primary-color);
     overflow: hidden;
-}
-
-.all-product .product-img img{
-    width: 600px;
-    overflow: hidden;
-    object-fit: cover;
-    height: 100%;   
+    position: relative;
 }
 .product-img{
     background-color: var(--primary-color);
-    position: relative;
-    transition: all 0.3s;
-    overflow: hidden;   
+    overflow: hidden; 
+    height: 350px;
 }
-.product-card:hover .product-img{
+.product-card .price{
+    position: absolute;
+    z-index: 1;
+    padding: 5px 15px;
+    background-color: var(--text-secondary-color);
+    top: 10px;
+    left: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+.product-card .price p{
+    color: var(--bg);
+}
+.product-card:hover .price{
+    visibility: visible;
+    opacity: 1;
+}
+.all-product .product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s ease;
+}
+.product-img a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.product-card:hover .product-img img{
     transform: scale(1.1);  
 }
 .product-details{
@@ -757,7 +778,7 @@ nav{
     background:var(--primary-color);
     width: 100%;
     padding: 40px 20px;
-    box-shadow: 0 15px 20px 1px #9c9c9c52;
+    box-shadow: 0 15px 15px #9c9c9c52;
 }
 .note-head{
     padding-bottom: 20px;
@@ -804,10 +825,15 @@ nav{
 }
 .team-card{
     text-align: center;
-    box-shadow: 0 9px 20px 1px #98767626;
+    box-shadow: 0 9px 15px #98767626;
     overflow: hidden;
 }
-.team-card img{
+.team-image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.team-image img{
     width: 100%;
     overflow: hidden;
     transition: all 0.6s ease;
@@ -817,7 +843,7 @@ nav{
     display: block;
     cursor: default;
 }
-.team-card:hover img{
+.team-card:hover .team-image img{
     transform: scale(1.1);
     
 }
@@ -885,7 +911,7 @@ nav{
     font-size: 36px;
 }
 .review{
-    box-shadow: 0 0 13px 1px #ddd;
+    box-shadow: 0 0 13px #ddd;
     border-left: 2px solid var(--text-secondary-color);
     height: 100%;
     padding: 25px 50px 50px;
@@ -917,18 +943,19 @@ nav{
 }
 .blog-card{
     background: var(--primary-color);
-    box-shadow: 0 5px 20px 1px #00000029;
+    box-shadow: 0 5px 15px #00000029;
     overflow: hidden;
 }
 .blog-img{
-    overflow: hidden;
-    transition: 0.6s;
+    overflow: hidden;  
 }
 .blog-img img{
-    width: 500px;
+    width: 100%;
     overflow: hidden;
+    object-fit: cover;
+    transition: 0.6s;
 }
-.blog-img:hover{
+.blog-img img:hover{
     transform: scale(1.1);
 }
 .blog-head{
