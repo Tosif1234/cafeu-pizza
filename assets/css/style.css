@@ -207,7 +207,6 @@ nav{
     padding-left: 0;
 }
 .navbar{
-    /* position: absolute; */
     padding-left: 0;
     z-index: 1;
     transition: all .03s ease;   
@@ -222,17 +221,15 @@ nav{
 }
 
 .nav-list li a {
-    font-size: 15px;
-    font-weight: 450;
-    color: var(--description-color-dark);
-    /* transition: all 0.5s ease; */    
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--description-color-dark);   
 }
 
 .container .col-nine{
     position: absolute;
     right: 0;
-    left: -10;
-    
+    left: -10;  
 }
 .dropdown{
     display: flex;
@@ -272,42 +269,32 @@ nav{
     margin: 3px;
     padding-top: 3px;
     color: var(--description-color-light);
-    width: 12px;
-    
-    
-   
+    width: 12px;  
 }
 .dropdown:hover img{
-    
     transform: rotate(180deg);
-    margin-top: 8px;
-    
+    margin-top: 8px;   
 }
 /* Banner */
 .banner{
     background-image: url(../images/banner-bg.jpg);
     height: 760px;
-    position: relative;
-    
+    position: relative; 
 }
 .banner .row{
     position: relative;
     height: 100%;
     align-items: center;
     justify-content: center;
-    line-height: 20px;
-   
+    line-height: 20px; 
 }
-
 .banner-details{
     margin-right: 10px;
     margin-top: 10%;
     position: absolute;
     top: 100px;
     padding-left: 17px;
-    left: 0;
-    
-    
+    left: 0;   
 }
 .s-title{
     color: var(--text-secondary-color);
@@ -379,17 +366,17 @@ nav{
     position: absolute;
     bottom: 50%;
     right: -100px;
-    transform: rotate(90deg);
-    
+    transform: rotate(90deg); 
 }
 .social-section li{
     padding: 12px;
 }
 .social-section li a{
     font-weight: 450;
-    font-size: 15px;
+    font-size: 16px;
     color: #666;
     transition: all 0.3s;
+    padding-top: 10px;
 }
 .social-section li a:hover{
     color: var(--text-secondary-color);
@@ -398,13 +385,9 @@ nav{
 
 /* feature Section */
 
-
-
 .feature{
     display: flex;
     justify-content: center;
-    
-    
 }
 .space-padding{
     padding-top: 105px;
@@ -486,10 +469,9 @@ nav{
     display: inline-flex;
     transform: rotate(45deg);
     margin: 10px;
-    opacity: 3;
-    
-
+    opacity: 3;  
 }
+
 .feature-card:hover .discover-bt::after,
 .feature-card:hover .discover-bt::before{
     transform: scale(1.5),rotate(45deg);
@@ -519,23 +501,20 @@ nav{
 .sub-des{
     color: var(--primary-color);
 }
+
 .input-field, .form-handle{
     display: flex;
     justify-content: flex-start;
     padding: 0 30px 30px;
-    outline: none;
-    
+    outline: none;    
 }
 .form-handle .btn i{
-    font-size: 15px;
-    
+    font-size: 15px;   
 }
 .form-handle{
     width: 100%;
     padding: 17px 13px;
-    font-size: var(--fs);
-    
-    
+    font-size: var(--fs);   
 }
 
 /* About Us Section */
@@ -554,8 +533,7 @@ nav{
 .service-list ul li{
     margin-bottom: 24px;
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
 }
 .service-icon{
     height: 55px;
@@ -591,23 +569,18 @@ nav{
 .cat-menu{
     display: flex;
     margin-bottom: 40px;
-    
-    
 }
 .cat-name{
     color: var(--description-color-dark);
     font-family: var(--secondary-font-style);
     font-size: 20px;
     transition: all 0.3s ease;
-    margin-top: 10px;
-    
-    
+    margin-top: 10px;   
 }
 .cat-items{
     padding: 1px 10px;
     cursor: pointer;
     margin: 7px 3px 3px;
-    
 }
 .cat-items img{
     width: 70px;
@@ -634,19 +607,16 @@ nav{
     width: 600px;
     overflow: hidden;
     object-fit: cover;
-    height: 100%;
-    
+    height: 100%;   
 }
 .product-img{
     background-color: var(--primary-color);
     position: relative;
     transition: all 0.3s;
-    overflow: hidden;
-    
+    overflow: hidden;   
 }
 .product-card:hover .product-img{
-    transform: scale(1.1);
-    
+    transform: scale(1.1);  
 }
 .product-details{
     padding: 25px;
@@ -679,16 +649,13 @@ nav{
     background: none;
     border: 1px solid #ddd;
     transition: all .1s ease;
-
 }
 
 .product-card:hover .wishlist-btn{
-    visibility: visible;
-    
+    visibility: visible;   
 }
 .product-card:hover .sm-btn:not(:first-child){
-    background-color: var(--text-secondary-color);
-    
+    background-color: var(--text-secondary-color);   
 }
 /* App Section */
 .app-section{
@@ -731,8 +698,7 @@ nav{
 .app-two{
     position: absolute;
     right: 300px;
-    animation: app-two 1.5s linear infinite alternate;
-    
+    animation: app-two 1.5s linear infinite alternate;   
 }
 
 @keyframes app-one{
@@ -743,8 +709,8 @@ nav{
     100%{
         top: -20px;
     }
-
 }
+
 @keyframes app-two{
     
     0%{
@@ -753,7 +719,6 @@ nav{
     100%{
         top: -60px;
     }
-
 }
 .mb-0{
     margin-bottom: 0;
@@ -781,13 +746,11 @@ nav{
 .available-content p{
     color: var(--primary-color);
     font-weight: 400;
-
 }
 .avail-inner{
     position: relative;
     width:100%;
     margin-top: 20px;
-
 }
 .avail-note{
     position: absolute;
@@ -837,8 +800,7 @@ nav{
     margin-bottom: 80px;
 }
 .team-head{
-    text-align: center;
-    
+    text-align: center;  
 }
 .team-card{
     text-align: center;
@@ -892,23 +854,18 @@ nav{
 }
 .partner-bg{
     padding: 82px 0;
-    background: #00000096;
-    
+    background: #00000096; 
 }
 .partner-logo{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    
+    width: 100%;  
 }
 .partner-logo img{
     width: 350px;
-    height: 60px;
-    
+    height: 60px;  
 }
-
-
 
 /* Customer Section */
 .customer{
